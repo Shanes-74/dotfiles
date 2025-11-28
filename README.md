@@ -1,2 +1,2 @@
-# Meus dofiles
-1. Dependencias:
+# Meus dotfiles
+Inicio de tudo..
