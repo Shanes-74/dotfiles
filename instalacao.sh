@@ -5,6 +5,11 @@ set -e  # Para o script parar caso algo dê errado
 #   FUNÇÕES
 # =========================
 
+instalar_pacotes_base() {
+    echo -e "\n==> Instalando pacotes essenciais..."
+    sudo pacman -Syyu --noconfirm --needed git base-devel stow
+}
+
 clonar_dotfiles() {
     echo -e "\n==> Clonando dotfiles..."
     if [[ ! -d ~/dotfiles ]]; then
@@ -14,25 +19,33 @@ clonar_dotfiles() {
     fi
 }
 
-instalar_stow() {
-    echo -e "\n==> Instalando stow..."
-    sudo pacman -Syy --noconfirm --needed stow
-}
-
 aplicar_stow() {
     echo -e "\n==> Aplicando stow (stow config)..."
-    cd ~/dotfiles
-    stow config || echo "⚠️  stow falhou (verifique conflitos em ~/.config)"
+    DOTFILES_DIR=~/dotfiles
+    TARGET_DIR=~/.config
+
+    # Remove arquivos conflitantes antes de aplicar
+    for item in "$DOTFILES_DIR/config"/*; do
+        nome=$(basename "$item")
+        if [[ -e "$TARGET_DIR/$nome" ]]; then
+            echo "⚠️  Arquivo/diretório $TARGET_DIR/$nome existe, removendo..."
+            rm -rf "$TARGET_DIR/$nome"
+        fi
+    done
+
+    # Aplica stow
+    cd "$DOTFILES_DIR"
+    stow config || echo "⚠️  Stow falhou."
 }
 
-instalar_pacotes() {
-    echo -e "\n==> Instalando pacotes oficiais..."
-    sudo pacman -Syyu --noconfirm --needed \
-        git base-devel ttf-dejavu noto-fonts-emoji ttf-liberation \
+instalar_pacotes_restantes() {
+    echo -e "\n==> Instalando pacotes adicionais..."
+    sudo pacman -S --noconfirm --needed \
+        ttf-dejavu noto-fonts-emoji ttf-liberation \
         noto-fonts noto-fonts-cjk \
         gst-plugins-{bad,base,good,ugly} \
         libdvdread libdvdnav libdvdcss a52dec libde265 x264 x265 xvidcore \
-        xdg-desktop-portal xdg-desktop-portal-hyprland intel-ucode stow \
+        xdg-desktop-portal xdg-desktop-portal-hyprland intel-ucode \
         dolphin waybar rofi swww
 }
 
@@ -63,12 +76,22 @@ reload_hyprland() {
 #   EXECUÇÃO
 # =========================
 
+# 1. Instalar pacotes essenciais (git, base-devel, stow)
+instalar_pacotes_base
+
+# 2. Clonar dotfiles
 clonar_dotfiles
-instalar_stow
+
+# 3. Aplicar stow com sobrescrita
 aplicar_stow
 
-instalar_pacotes
+# 4. Instalar pacotes restantes
+instalar_pacotes_restantes
+
+# 5. Instalar AUR helper
 instalar_paru
+
+# 6. Recarregar Hyprland (se estiver rodando)
 reload_hyprland
 
 echo -e "\n🎉 Concluído com sucesso!"
