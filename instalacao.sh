@@ -33,12 +33,7 @@ instalar_pacotes() {
         gst-plugins-{bad,base,good,ugly} \
         libdvdread libdvdnav libdvdcss a52dec libde265 x264 x265 xvidcore \
         xdg-desktop-portal xdg-desktop-portal-hyprland intel-ucode stow \
-}
-
-Instalador_programas() {
-    echo -e "\n==> Instalando programas..."
-    sudo pacman -S --noconfirm --needed \
-    dolphin waybar rofi swww \
+        dolphin waybar rofi swww
 }
 
 instalar_paru() {
@@ -73,7 +68,6 @@ instalar_stow
 aplicar_stow
 
 instalar_pacotes
-Instalador_programas
 instalar_paru
 reload_hyprland
 
