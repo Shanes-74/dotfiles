@@ -27,10 +27,10 @@ clonar_dotfiles() {
     stow config || echo "⚠️  stow falhou (verifique conflitos em ~/.config)"
 }
 
-Instalador_programas() {
+instalar_programas() {
     echo -e "\n==> Instalando programas..."
     sudo pacman -S --noconfirm --needed \
-    dolphin waybar rofi swww \
+        dolphin waybar rofi swww
 }
 
 instalar_paru() {
