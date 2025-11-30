@@ -6,3 +6,11 @@ sudo pacman -S --noconfirm --needed dolphin stow waybar rofi swww
 cd ~/dotfiles
 stow hyprland
 hyprctl reload
+
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -s --noconfirm
+sudo pacman -U *.pkg.tar.* --noconfirm
+cd ~
+rm paru
+
