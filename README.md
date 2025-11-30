@@ -11,3 +11,6 @@
 
 ### Portais XDG (Integração)
     xdg-desktop-portal xdg-desktop-portal-hyprland
+
+### Ferramentas de Compactação/Descompactação
+    zip unzip tar gzip bzip2 xz p7zip unrar aj
