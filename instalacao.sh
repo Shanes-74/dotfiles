@@ -5,6 +5,26 @@ set -e  # Para o script parar caso algo dê errado
 #   FUNÇÕES
 # =========================
 
+clonar_dotfiles() {
+    echo -e "\n==> Clonando dotfiles..."
+    if [[ ! -d ~/dotfiles ]]; then
+        git clone https://github.com/Shanes-74/dotfiles.git ~/dotfiles
+    else
+        echo "Pasta ~/dotfiles já existe, pulando clone..."
+    fi
+}
+
+instalar_stow() {
+    echo -e "\n==> Instalando stow..."
+    sudo pacman -Syy --noconfirm --needed stow
+}
+
+aplicar_stow() {
+    echo -e "\n==> Aplicando stow (stow config)..."
+    cd ~/dotfiles
+    stow config || echo "⚠️  stow falhou (verifique conflitos em ~/.config)"
+}
+
 instalar_pacotes() {
     echo -e "\n==> Instalando pacotes oficiais..."
     sudo pacman -Syyu --noconfirm --needed \
@@ -15,22 +35,10 @@ instalar_pacotes() {
         xdg-desktop-portal xdg-desktop-portal-hyprland intel-ucode stow \
 }
 
-clonar_dotfiles() {
-    echo -e "\n==> Clonando dotfiles..."
-    if [[ ! -d ~/dotfiles ]]; then
-        git clone https://github.com/Shanes-74/dotfiles.git ~/dotfiles
-    else
-        echo "Pasta ~/dotfiles já existe, pulando clone..."
-    fi
-
-    cd ~/dotfiles
-    stow config || echo "⚠️  stow falhou (verifique conflitos em ~/.config)"
-}
-
-instalar_programas() {
+Instalador_programas() {
     echo -e "\n==> Instalando programas..."
     sudo pacman -S --noconfirm --needed \
-        dolphin waybar rofi swww
+    dolphin waybar rofi swww \
 }
 
 instalar_paru() {
@@ -60,8 +68,12 @@ reload_hyprland() {
 #   EXECUÇÃO
 # =========================
 
-instalar_pacotes
 clonar_dotfiles
+instalar_stow
+aplicar_stow
+
+instalar_pacotes
+Instalador_programas
 instalar_paru
 reload_hyprland
 
