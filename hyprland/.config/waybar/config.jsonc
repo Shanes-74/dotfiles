@@ -10,9 +10,10 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "hyprland/window"
+
     ],
     "modules-right": [
+        "tray",
         "pulseaudio",
         "network",
         "power-profiles-daemon",
@@ -23,10 +24,7 @@
         "keyboard-state",
         "sway/language",
         "battery",
-        "battery#bat2",
-        "clock",
-        "tray",
-        "custom/power"
+        "clock"
     ],
    
     "keyboard-state": {
