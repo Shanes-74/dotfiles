@@ -4,7 +4,7 @@
 ## Dependencias:
 
 ### Fontes
-    ttf-dejavu noto-fonts-emoji ttf-liberation noto-fonts noto-fonts-cjk
+    ttf-dejavu noto-fonts-emoji ttf-liberation noto-fonts noto-fonts-cjk ttf-jetbrains-mono-nerd
 
 ### Codecs (Áudio/Vídeo)
     gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly libdvdread libdvdnav libdvdcss a52dec libde265 x264 x265 xvidcore
