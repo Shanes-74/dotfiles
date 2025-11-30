@@ -12,8 +12,7 @@ instalar_pacotes() {
         noto-fonts noto-fonts-cjk \
         gst-plugins-{bad,base,good,ugly} \
         libdvdread libdvdnav libdvdcss a52dec libde265 x264 x265 xvidcore \
-        xdg-desktop-portal xdg-desktop-portal-hyprland intel-ucode \
-        dolphin stow waybar rofi swww
+        xdg-desktop-portal xdg-desktop-portal-hyprland intel-ucode stow \
 }
 
 clonar_dotfiles() {
@@ -26,6 +25,12 @@ clonar_dotfiles() {
 
     cd ~/dotfiles
     stow config || echo "⚠️  stow falhou (verifique conflitos em ~/.config)"
+}
+
+Instalador_programas() {
+    echo -e "\n==> Instalando programas..."
+    sudo pacman -S --noconfirm --needed \
+    dolphin waybar rofi swww \
 }
 
 instalar_paru() {
