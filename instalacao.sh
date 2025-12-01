@@ -36,6 +36,13 @@ aplicar_stow() {
     # Aplica stow
     cd "$DOTFILES_DIR"
     stow config || echo "⚠️  Stow falhou."
+
+    systemctl --user enable swww.service
+    systemctl --user start swww.service
+    systemctl --user enable change_wallpaper.service
+    systemctl --user start change_wallpaper.service
+    systemctl --user enable change_wallpaper.timer
+    systemctl --user start change_wallpaper.timer
 }
 
 instalar_pacotes_restantes() {
