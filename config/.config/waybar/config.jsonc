@@ -3,26 +3,24 @@
     "layer": "top", // Waybar at top layer
     "position": "right", // Waybar position (top|bottom|left|right)
     "height": 1010, // Waybar height (to be removed for auto height)
-    "width": 75, // Waybar width
-    //"spacing": 2, // Gaps between modules (4px)
-    "margin-left": -24,
+    "width": 65, // Waybar width
+    //"spacing": 0, // Gaps between modules (4px)
+    "margin-left": -30,
     "margin-right": 35,
     
     // Choose the order of the modules
     "modules-left": [
+        "custom/menu",
         "network",
         "pulseaudio",
         "backlight",
         "custom/wallpaper"
     ],
     "modules-center": [
-        
+        "hyprland/workspaces"
     ],
     "modules-right": [
-        "hyprland/workspaces",
         "tray",
-        //"memory",
-        //"temperature",
         "battery",
         "clock",
         "custom/power"
@@ -115,6 +113,12 @@
         "on-click": "pavucontrol"
     },
     
+    "custom/menu": {
+        "on-click": "rofi -show drun & sleep 0.2 && hyprctl reload",
+        "format": "󰣇",
+        "tooltip": false
+    },
+
     "custom/power": {
         "format" : "",
 		"tooltip": false
@@ -124,5 +128,6 @@
         "on-click": "bash ~/.config/swww/swww.sh",
         "format": "󰸉",
         "tooltip": false
-    }
+    },
+
 }
