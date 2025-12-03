@@ -1,5 +1,5 @@
 * {
-    font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
+    font-family: /*"SF Pro Display", */"GeistMono Nerd Font Propo";
     font-size: 14px;
     font-weight: bold;
 
@@ -16,20 +16,35 @@ window#waybar {
 
 
 
-
 #workspaces button {
-    
+    font-size: 24px;
+    font-weight: bold;
+    color: transparent;
+    border: 3px solid rgba(100, 114, 125, 0.5);
+    background: rgba(100, 114, 125, 0.3);
+    border-radius: 50%;
+    margin: 20px;
+    padding: 0px 4px;
+   
 }
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    font-weight: bold;
+    color: transparent;
+    border: 3px solid rgba(250, 179, 135, 0.8);
+    background: rgba(100, 114, 125, 0.3);
+    border-radius: 50%;
+    margin: 20px;
+    padding: 0px 4px;
 }
-#workspaces button.focused {
-    background-color: #64727D;
+#workspaces button.active {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fab387;
 
 }
 #workspaces button.urgent {
-    background-color: #eb4d4b;
-    color: black;
+    background-color: rgba(235, 77, 75, 0.8);
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -50,7 +65,6 @@ window#waybar {
 #network,
 #pulseaudio,
 #tray,
-#workspaces button,
 #custom-power,
 #custom-wallpaper,
 #custom-menu {
@@ -60,7 +74,7 @@ window#waybar {
     border: 2px solid rgba(250, 179, 135, 0.5);
     border-radius: 3px;
     background: rgba(250, 179, 135, 0.5);
-    margin: 6px 12px;
+    margin: 7px 14px;
 }
 
 
@@ -72,7 +86,6 @@ window#waybar {
 #network:hover,
 #pulseaudio:hover,
 #tray:hover,
-#workspaces button:hover,
 #custom-power:hover,
 #custom-wallpaper:hover,
 #custom-menu:hover {
@@ -92,12 +105,6 @@ window#waybar {
 
 #custom-power {
     margin-bottom: 12px;
-}
-
-
-
-#clock {
-    font-family: "JetBrainsMono Nerd Font Propo";
 }
 
 

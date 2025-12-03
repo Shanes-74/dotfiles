@@ -3,9 +3,9 @@
     "layer": "top", // Waybar at top layer
     "position": "right", // Waybar position (top|bottom|left|right)
     "height": 1010, // Waybar height (to be removed for auto height)
-    "width": 65, // Waybar width
+    "width": 68, // Waybar width
     //"spacing": 0, // Gaps between modules (4px)
-    "margin-left": -30,
+    "margin-left": -28,
     "margin-right": 35,
     
     // Choose the order of the modules
@@ -27,7 +27,7 @@
     ],
 
     "hyprland/workspaces": {
-        "format": "{}",
+        "format": "",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
