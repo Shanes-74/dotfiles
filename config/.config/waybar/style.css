@@ -1,7 +1,8 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "JetBrainsMono Nerd Font", sans-serif;
-    font-size: 14px;
+    font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
+    font-size: 16px;
+    font-weight: bold;
+
 }
 
 
@@ -11,13 +12,12 @@ window#waybar {
     border: 3px solid rgba(250, 179, 135, 0.8);
     box-shadow: 0px 4px 8px 0px #00000080;
     color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
 }
 
 
 
 #workspaces button {
+    color: #fab387;
     border: 3px solid rgb(250, 179, 135);
 }
 #workspaces button:hover {
@@ -49,18 +49,23 @@ window#waybar {
 #network,
 #pulseaudio,
 #tray,
-#workspaces,
-#custom-power {
+#workspaces button,
+#custom-power,
+#custom-wallpaper{
     font-size: 24px;
     color: #fab387;
-    padding: 10px 0px 10px 0px;
+    padding: 12px 0 12px 0;
+    border: 3px solid rgba(250, 179, 135, 0.6);
+    border-radius: 10px;
+    background: rgba(30, 30, 46, 1);
+    margin: 0 6px 0 6px;
 }
+
+
 
 #battery {
-    font-size: 32px;
+    font-size: 28px;
 }
-
-
 
 #battery.charging, #battery.plugged {
     color: #9fc92e;

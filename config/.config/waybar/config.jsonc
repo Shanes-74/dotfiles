@@ -12,7 +12,8 @@
     "modules-left": [
         "network",
         "pulseaudio",
-        "backlight"
+        "backlight",
+        "custom/wallpaper"
     ],
     "modules-center": [
         
@@ -117,5 +118,11 @@
     "custom/power": {
         "format" : "",
 		"tooltip": false
+    },
+
+    "custom/wallpaper": {
+        "on-click": "bash ~/.config/swww/swww.sh",
+        "format": "󰸉",
+        "tooltip": false
     }
 }
