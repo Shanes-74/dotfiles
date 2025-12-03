@@ -1,5 +1,7 @@
 # Meu Hyprland dotfiles
-#### Inicio de tudo..
+
+## Instalação Automatica:
+    curl -s https://raw.githubusercontent.com/Shanes-74/dotfiles/main/instalacao.sh | bash
 
 ## Dependencias:
 
