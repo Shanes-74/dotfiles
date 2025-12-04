@@ -70,11 +70,7 @@
     
         // ATENÇÃO: format-icons deve ser um OBJETO, não uma LISTA
         "format-icons": {
-            // Ícones de DESCARREGANDO (Low -> High)
             "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        
-            // Ícones de CARREGANDO (Low -> High)
-            // O Waybar automaticamente usará esta lista quando o status for "charging"
             "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"] 
         },
     
@@ -96,21 +92,22 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-bluetooth": "󰂱",
+        "format-bluetooth-muted": "󰂲",
+        "format-muted": "",
+        "format-source": "",
         "format-source-muted": "",
+        "on-click": "pavucontrol",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
-            "headset": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "tooltip-format": "{desc}: {volume}%",
     },
     
     "custom/menu": {
