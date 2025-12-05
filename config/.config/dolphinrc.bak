@@ -4,9 +4,11 @@ MenuBar=Disabled
 PreviewSize=32
 
 [General]
-GlobalViewProps=false
 Version=202
 ViewPropsTimestamp=2025,11,30,20,15,13.826
+
+[Icons]
+Theme=Papirus-Dark
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -23,6 +25,3 @@ ColorScheme=catppuccin-mocha-peach
 
 [ViewPropertiesDialog]
 1920x1080 screen: Window-Maximized=true
-
-[Icons]
-Theme=Papirus-Dark

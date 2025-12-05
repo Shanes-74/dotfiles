@@ -1,0 +1,18 @@
+[KDE]
+ShowDeleteCommand=true
+
+[PreviewSettings]
+EnableRemoteFolderThumbnail=false
+MaximumRemoteSize=0
+
+; === FORÇANDO A COR DE FUNDO PARA O CATPPUCCIN MOCHA (181825) ===
+[Color Scheme]
+colorScheme=Catppuccin-Mocha-Peach
+activeBackground=24,24,37       ; #181825 (Cor de Fundo Base do Mocha)
+inactiveBackground=24,24,37     ; #181825
+background=24,24,37             ; #181825
+backgroundNormal=24,24,37       ; #181825
+
+[Colors:Window]
+BackgroundAlternate=24,24,37
+BackgroundNormal=24,24,37
