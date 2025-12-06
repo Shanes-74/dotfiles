@@ -1,6 +1,6 @@
 // -*- mode: jsonc -*-
 {
-    "layer": "top", // Waybar at top layer
+    //"layer": "top", // Waybar at top layer
     "position": "right", // Waybar position (top|bottom|left|right)
     "height": 1010, // Waybar height (to be removed for auto height)
     "width": 68, // Waybar width
@@ -29,9 +29,12 @@
     "hyprland/workspaces": {
         "format": "",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1"
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "persistent-workspaces": { 
+		    "*": 3
+        }
     },
-
+    
     "tray": {
         "icon-size": 26,
         "spacing": 10
