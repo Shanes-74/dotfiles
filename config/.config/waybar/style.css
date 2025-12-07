@@ -41,11 +41,11 @@ window#waybar {
     font-size: 24px;
     font-weight: bold;
     color: #fab387;
-
 }
 #workspaces button.urgent {
     background-color: rgba(235, 77, 75, 0.8);
 }
+
 
 
 
@@ -119,7 +119,7 @@ window#waybar {
     font-size: 26px;
 }
 #battery.charging, #battery.plugged {
-    color: #9fc92e;
+    color: #a6e3a1;
 }
 @keyframes blink {
     to {

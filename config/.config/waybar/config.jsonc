@@ -58,7 +58,7 @@
         // "device": "acpi_video1",
         "format": "{icon}",
         "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
-        "tooltip-format": "{percent}%"
+        "tooltip-format": "Brilho: {percent}%"
     },
 
     "battery": {
@@ -77,8 +77,8 @@
             "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"] 
         },
     
-        "tooltip-format": "{capacity}% - Empty in {time}", 
-        "tooltip-format-charging": "{capacity}% - Full in {time}",
+        "tooltip-format": "{capacity}% - Descarregado em: {time}", 
+        "tooltip-format-charging": "{capacity}% - Carregado em: {time}",
     },
         
     "network": {
@@ -86,10 +86,10 @@
         "format-wifi": "{icon}",
         "format-icons": ["󰤫", "󰤟", "󰤢", "󰤥", "󰤨"],
         "format-ethernet": "",
-        "tooltip-format": "",
         "format-linked": "",
         "format-disconnected": "⚠",
-        "on-click": "nmgui"
+        "on-click": "nmgui",
+        "tooltip-format": "{essid} ({signalStrength}%)\n{ipaddr}",
     },
 
     "pulseaudio": {
