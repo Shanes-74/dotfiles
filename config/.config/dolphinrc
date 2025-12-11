@@ -1,0 +1,21 @@
+MenuBar=Disabled
+
+[DetailsMode]
+PreviewSize=22
+
+[General]
+Version=202
+ViewPropsTimestamp=2025,11,30,20,15,13.826
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=16
+
+[MainWindow]
+MenuBar=Disabled
+
+[PlacesPanel]
+IconSize=16
+
+[ViewPropertiesDialog]
+1920x1080 screen: Window-Maximized=true
