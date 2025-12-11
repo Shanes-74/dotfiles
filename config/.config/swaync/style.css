@@ -1,0 +1,19 @@
+.control-center {
+  background-color: rgba(30, 30, 46, 0.7);
+  border: 3px solid rgba(250, 179, 135, 0.8);
+  border-radius: 0px;
+  padding: 10px;
+}
+
+.notification {
+  background: rgba(40, 40, 40, 0.8);
+  border-radius: 10px;
+  padding: 8px;
+  margin: 6px 0;
+}
+
+.widget-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

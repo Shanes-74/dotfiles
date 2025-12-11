@@ -1,0 +1,35 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-layer": "top",
+  "cssPriority": "application",
+
+  "control-center-margin-top": 10,
+  "control-center-margin-right": 15,
+  "control-center-width": 481,
+  "control-center-height": 550,
+
+  "notification-icon-size": 34,
+  "notification-body-image-size": 100,
+
+
+  "widgets": [
+    "title",
+    "dnd",
+    "mpris",
+    "notifications"
+  ],
+
+  "widget-config": {
+    "title": {
+      "text": "Centro de Controle"
+    },
+    "buttons": {
+      "clear-all-button": true
+    },
+    "dnd": {
+      "text": "Não perturbe"
+    }
+  }
+}
