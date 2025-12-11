@@ -22,7 +22,7 @@ window#waybar {
     border: 3px solid rgba(255, 255, 255, 0.1);
     background: rgba(100, 114, 125, 0.3);
     border-radius: 50%;
-    margin: 24px 12px;
+    margin: 20px;
     padding: 0px 4px;
 }
 #workspaces button.empty {
@@ -40,7 +40,6 @@ window#waybar {
 #workspaces button:hover {
     border: 3px solid rgba(250, 179, 135, 0.8);
 }
-
 
 
 
@@ -65,24 +64,17 @@ window#waybar {
 #custom-power,
 #custom-wallpaper,
 #custom-menu,
-#custom-notification, 
-#custom-clipboard {
+#custom-notification {
     font-size: 24px;
     color: #fab387;
+    padding: 2px 0px;
     border: 2px solid rgba(250, 179, 135, 0.5);
     border-radius: 3px;
     background: rgba(250, 179, 135, 0.5);
-    margin: 16px 7px;
-    padding: 0px 10px;   
+    margin: 7px 14px;
 }
 
-#custom-power {
-    margin-right: 14px;
 
-}
-#custom-menu {
-    margin-left: 14px;
-}
 
 #clock:hover,
 #battery:hover,
@@ -94,10 +86,29 @@ window#waybar {
 #custom-power:hover,
 #custom-wallpaper:hover,
 #custom-menu:hover,
-#custom-notification:hover,
-#custom-clipboard:hover {
+#custom-notification:hover {
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(250, 179, 135, 0.8);
+}
+
+#custom-notification {
+    padding: 5px 0px;
+}
+
+#tray {
+    padding: 6px 0px;
+}
+
+
+
+#custom-menu {
+    margin-top: 12px;
+}
+
+
+
+#custom-power {
+    margin-bottom: 12px;
 }
 
 
