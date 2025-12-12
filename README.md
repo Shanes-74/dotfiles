@@ -1,4 +1,4 @@
-# Meu Arch + Hyprland dotfiles
+# Meus Hyprarch dot's
 
 ## Instalação Automatica:
     curl -s https://raw.githubusercontent.com/Shanes-74/dotfiles/main/instalacao.sh | bash
