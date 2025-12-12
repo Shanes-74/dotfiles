@@ -1,26 +1,28 @@
 // -*- mode: jsonc -*-
 {
     //"layer": "top", // Waybar at top layer
-    "position": "right", // Waybar position (top|bottom|left|right)
-    "height": 1010, // Waybar height (to be removed for auto height)
-    "width": 68, // Waybar width
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 20, // Waybar height (to be removed for auto height)
+    "width": 1890, // Waybar width
     //"spacing": 0, // Gaps between modules (4px)
-    "margin-left": -28,
-    "margin-right": 35,
+    "margin-top": -5,
+    "margin-bottom": 15,
     
     // Choose the order of the modules
     "modules-left": [
         "custom/menu",
-        "network",
-        "pulseaudio",
-        "backlight",
-        "custom/wallpaper"
+        "hyprland/workspaces"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        
     ],
     "modules-right": [
         "tray",
+        "custom/wallpaper",
+        "custom/clipboard",
+        "network",
+        "pulseaudio",
+        "backlight",
         "battery",
         "clock",
         "custom/notification",
@@ -38,17 +40,14 @@
     
     "tray": {
         "icon-size": 26,
-        "spacing": 10
+        "spacing": 15
     },
 
     "clock": {
         "timezone": "America/Sao_Paulo",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%I
-%M}",
-        "format-alt": "{:%d
-%m
-%y}"
+        "format": "{:%I:%M}",
+        "format-alt": "{:%d.%m.%y}"
     },
 
     "memory": {
@@ -144,12 +143,17 @@
             "dnd-inhibited-notification": "󰂛",
             "dnd-inhibited-none": "󰪑"
     },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
-
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    
+    "custom/clipboard": {
+        "format": "",
+        "on-click": "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy",
+        "tooltip": false
+    }
 }

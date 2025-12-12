@@ -9,6 +9,7 @@
 window#waybar {
     background-color: rgba(30, 30, 46, 0.7);
     border: 3px solid rgba(250, 179, 135, 0.8);
+    border-radius: 8px;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.502);
     color: #ffffff;
 }
@@ -21,8 +22,8 @@ window#waybar {
     color: rgba(255, 255, 255, 0.1);
     border: 3px solid rgba(255, 255, 255, 0.1);
     background: rgba(100, 114, 125, 0.3);
-    border-radius: 50%;
-    margin: 24px 12px;
+    border-radius: 100%;
+    margin: 20px;
     padding: 0px 4px;
 }
 #workspaces button.empty {
@@ -40,7 +41,6 @@ window#waybar {
 #workspaces button:hover {
     border: 3px solid rgba(250, 179, 135, 0.8);
 }
-
 
 
 
@@ -65,24 +65,18 @@ window#waybar {
 #custom-power,
 #custom-wallpaper,
 #custom-menu,
-#custom-notification, 
+#custom-notification,
 #custom-clipboard {
     font-size: 24px;
     color: #fab387;
+    padding: 2px 0px;
     border: 2px solid rgba(250, 179, 135, 0.5);
-    border-radius: 3px;
+    border-radius: 8px;
     background: rgba(250, 179, 135, 0.5);
-    margin: 16px 7px;
-    padding: 0px 10px;   
+    margin: 7px 14px;
 }
 
-#custom-power {
-    margin-right: 14px;
 
-}
-#custom-menu {
-    margin-left: 14px;
-}
 
 #clock:hover,
 #battery:hover,
@@ -98,6 +92,27 @@ window#waybar {
 #custom-clipboard:hover {
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(250, 179, 135, 0.8);
+}
+
+#custom-notification {
+    font-size: 28px;
+    padding: 0px 0px;
+}
+
+#tray {
+    padding: 6px 0px;
+}
+
+
+
+#custom-menu {
+    margin-top: 12px;
+}
+
+
+
+#custom-power {
+    margin-bottom: 12px;
 }
 
 
