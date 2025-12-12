@@ -1,30 +1,23 @@
-/*
- * ROFI color theme - Catppuccin Mocha (Suave e Transparente)
- * Destaque (Accent) na cor Peach (#fab387)
- * **ULTIMA VERSÃO: Opacidade 80%, Borda Peach com 80% de Opacidade (fab387cc)**
- */
-
 * {
-	/* Catppuccin Mocha (Peach accent) palette */
-	base00: #1e1e2e; /* Crust/Base (Fundo mais escuro) */
-	base01: #313244; /* Surface0 (Fundo/Alt. Suave) */
-	base02: #45475a; /* Surface1 (Borda/Separador Suave) */
-	base03: #6c7086; /* Overlay0 (Cor suave para Prompts) */
-	base04: #bac2de; /* Subtext1 */
-	base05: #cdd6f4; /* Text (Cor principal do texto) */
-	base06: #cdd6f4; /* text bright */
-	base07: #ffffff; /* white (Não usado diretamente) */
-	base08: #f38ba8; /* red */
-	base09: #fab387; /* peach (ACCENT / Laranja - Destacado) */
-	base0A: #f9e2af; /* yellow */
-	base0B: #a6e3a1; /* green */
-	base0C: #94e2d5; /* teal/cyan */
-	base0D: #89b4fa; /* blue */
-	base0E: #cba6f7; /* mauve */
-	base0F: #f5c2e7; /* pink */
-	
-	/* NOVO: Variável Peach com 80% de Opacidade (fab387cc) */
+	base00: #1e1e2e;
+	base01: #313244;
+	base02: #45475a;
+	base03: #6c7086;
+	base04: #bac2de;
+	base05: #cdd6f4;
+	base06: #cdd6f4;
+	base07: #ffffff;
+	base08: #f38ba8;
+	base09: #fab387;
+	base0A: #f9e2af;
+	base0B: #a6e3a1;
+	base0C: #94e2d5;
+	base0D: #89b4fa;
+	base0E: #cba6f7;
+	base0F: #f5c2e7;
+
 	peach-alpha: #fab387cc;
+	base10: #1e1e2ecc;
 
 	spacing: 0;
 	background-color: transparent;
@@ -32,20 +25,20 @@
 
 window {
 	transparency: "real";
-	/* Fundo: Surface0 (#313244) + CC (80% de opacidade) */
-	background-color: #313244CC; 
-	/* Borda da Janela: 3px com a cor Peach + 80% de Opacidade (@peach-alpha) */
-	border: 3px; 
-	border-color: @peach-alpha; 
+	background-color: @base10;
+	border: 3px;
+	border-color: @peach-alpha;
+	border-radius: 8px;
+	font: "SF Pro Rounded Regular 13";
 }
 
 mainbox {
 	children: [inputbar, message, mode-switcher, listview];
 	spacing: 30px;
 	padding: 30px 0;
-	/* Bordas internas removidas para deixar a borda da 'window' ser a única */
-	border: 0; 
-	border-color: @base02; 
+	border: 0;
+	border-color: @base02;
+	border-radius: 8px;
 }
 
 inputbar {
@@ -54,46 +47,39 @@ inputbar {
 }
 
 prompt {
-	/* Prompt suave: Usando Overlay0 (#6c7086) */
-	text-color: @base03; 
+	text-color: @base03;
 }
 
 textbox-prompt-colon {
 	expand: false;
 	str: ":";
 	margin: 0 1ch 0 0;
-	/* Separador suave: Usando Overlay0 (#6c7086) */
 	text-color: @base03;
 }
 
 entry {
-	/* Texto principal: Usando Text (#cdd6f4) */
-	text-color: @base05; 
+	text-color: @base05;
 }
 
 case-indicator {
-	/* Mantido: Pink */
-	text-color: @base0F; 
+	text-color: @base0F;
 }
 
 mode-switcher, message {
 	border: 1px 0;
-	/* Separador suave: Usando Surface1 (#45475a) */
-	border-color: @base02; 
+	border-color: @base02;
 }
 
 button, textbox {
-	/* Fundo do botão em Surface0, para contraste suave contra a janela transparente */
-	background-color: @base01; 
-	text-color: @base05; /* Texto claro */
+	background-color: @base01;
+	text-color: @base05;
 	padding: 5px;
 }
 
 button selected {
-	/* Destaque no botão: Usando Peach (@base09) */
-	background-color: @base09; 
-	/* Texto escuro (@base00) para manter o alto contraste */
+	background-color: @base09;
 	text-color: @base00;
+	border-radius: 8px;
 }
 
 listview {
@@ -102,14 +88,12 @@ listview {
 }
 
 scrollbar {
-	/* Fundo da barra de rolagem: Surface1 (#45475a) */
-	background-color: @base02; 
-	/* Alça da barra de rolagem (handle): Overlay0 (#6c7086) para ser sutil */
-	handle-color: @base03; 
+	background-color: @base02;
+	handle-color: @base03;
 	handle-width: 10px;
 	border: 0 1px;
-	/* Borda suave: Surface1 (#45475a) */
-	border-color: @base02; 
+	border-radius: 8px;
+	border-color: @base02;
 	margin: 0 0 0 20px;
 }
 
@@ -119,26 +103,27 @@ element {
 	highlight: bold underline;
 	children: [element-icon, element-text];
 }
+
 element-text, element-icon {
 	background-color : inherit;
-	text-color	     : inherit;
+	text-color: @base05;
 	foreground-color : inherit;
 }
 
 element normal {
-	/* Fundo do item não selecionado: transparente (Baseado no fundo da janela) */
 	background-color: transparent;
 }
 
 element selected {
-	/* Fundo selecionado: Usando Peach (@base09) */
-	background-color: @base09; 
-	/* Texto escuro (@base00) para alto contraste */
-	text-color: @base00; 
+	background-color: @base09;
+	border-radius: 8px;
+}
+
+element-text selected {
+	text-color: @base00;
 }
 
 element alternate {
-	/* Tornando alternados transparentes também */
 	background-color: transparent;
 }
 
@@ -147,9 +132,9 @@ element normal normal, element selected normal, element alternate normal {
 }
 
 element normal urgent, element selected urgent, element alternate urgent {
-	text-color: @base08; /* Red */
+	text-color: @base08;
 }
 
 element normal active, element selected active, element alternate active {
-	text-color: @base0B; /* Green */
+	text-color: @base0B;
 }
