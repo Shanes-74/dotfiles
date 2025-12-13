@@ -51,11 +51,10 @@
     "buttons-grid",
     "volume",
     "backlight",
-    "mpris",
     "title",
     "dnd",
+    "mpris",
     "notifications"
-    
   ],
 
   "widget-config": {
@@ -73,20 +72,16 @@
       "image-radius": 12
     },
     "volume": {
-      "label": "󰕾",
-      "show-per-app": false
+      "label": "󰕾 ",
+      "show-per-app": true
   },
     "backlight": {
-      "label": "󰃟",
+      "label": "󰃟 ",
       "device": "intel_backlight"
   },
 
     "buttons-grid": {
       "actions": [
-        {
-          "label": "󱚾",
-          "command": "nmgui"
-        },
         {
           "label": "󰕾",
           "command": "pavucontrol"

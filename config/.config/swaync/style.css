@@ -1,14 +1,10 @@
 .control-center {
-  background-color: rgba(30, 30, 46, 0.51);
+  background-color: rgba(30, 30, 46, 0.7);
   border: 3px solid rgba(250, 179, 135, 0.8);
   border-radius: 8px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
   transition: background-color 0.1s ease;
   padding: 10px;
-}
-
-.control-center .control-center-list {
-  background-color: rgba(250, 179, 135, 0);
 }
 
 .close-button {
@@ -45,8 +41,10 @@
 .notification:hover {
   background-color: rgba(145, 102, 74, 0.51);
 }
+
 .notification-default-action:hover,
-.notification-content:hover {
+.notification-content:hover,
+.notification-action:hover {
   background-color: transparent;
 }
 
