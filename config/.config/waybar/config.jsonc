@@ -3,7 +3,7 @@
     //"layer": "top", // Waybar at top layer
     "position": "right", // Waybar position (top|bottom|left|right)
     "height": 1010, // Waybar height (to be removed for auto height)
-    "width": 68, // Waybar width
+    "width": 20, // Waybar width
     //"spacing": 0, // Gaps between modules (4px)
     "margin-left": -25,
     "margin-right": 35,
@@ -11,9 +11,9 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/menu",
+        "network",
         "custom/notification",
-        /*"network",
-        "pulseaudio",
+        /*"pulseaudio",
         "backlight",*/
         "custom/clipboard",
         "custom/wallpaper"
@@ -154,7 +154,7 @@
   },
 
   "custom/clipboard": {
-        "format": "",
+        "format": "󰨸",
         "on-click": "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy",
         "tooltip": false
     }

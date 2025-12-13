@@ -1,7 +1,7 @@
 
  * {
-    font-family: "SF Mono", "GeistMono Nerd Font Propo";
-    font-size: 14px;
+    font-family: "SF Mono", "JetBrainsMono Nerd Font Propo";
+    font-size: 16px;
     font-weight: bold;
 
 }
@@ -23,7 +23,7 @@ window#waybar {
     border: 3px solid rgba(255, 255, 255, 0.1);
     background: rgba(100, 114, 125, 0.3);
     border-radius: 100%;
-    margin: 20px;
+    margin: 12px 20px;
     padding: 0px 4px;
 }
 #workspaces button.empty {
@@ -67,16 +67,14 @@ window#waybar {
 #custom-menu,
 #custom-notification,
 #custom-clipboard {
-    font-size: 24px;
+    font-size: 28px;
     color: #fab387;
-    padding: 2px 0px;
+    padding: 0px;
     border: 2px solid rgba(250, 179, 135, 0.5);
     border-radius: 8px;
     background: rgba(250, 179, 135, 0.5);
-    margin: 7px 14px;
+    margin: 4px 14px;
 }
-
-
 
 #clock:hover,
 #battery:hover,
@@ -94,32 +92,23 @@ window#waybar {
     border: 2px solid rgba(250, 179, 135, 0.8);
 }
 
-#custom-notification {
-    font-size: 28px;
-    padding: 0px 0px;
+#clock {
+    font-size: 26px;
 }
 
 #tray {
     padding: 6px 0px;
 }
 
-
-
 #custom-menu {
     margin-top: 12px;
 }
-
-
-
 #custom-power {
     margin-bottom: 12px;
 }
 
 
 
-#battery {
-    font-size: 26px;
-}
 #battery.charging, #battery.plugged {
     color: #a6e3a1;
 }
