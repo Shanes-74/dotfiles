@@ -15,7 +15,6 @@
 	base0D: #89b4fa;
 	base0E: #cba6f7;
 	base0F: #f5c2e7;
-
 	peach-alpha: #fab387cc;
 	base10: #1e1e2ecc;
 
@@ -29,7 +28,7 @@ window {
 	border: 3px;
 	border-color: @peach-alpha;
 	border-radius: 8px;
-	font: "SF Pro Rounded Regular 13";
+	font: "SF Mono Regular 14";
 }
 
 mainbox {
