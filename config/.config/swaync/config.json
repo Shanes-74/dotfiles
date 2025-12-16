@@ -3,30 +3,26 @@
   "positionX": "right",
   "positionY": "top",
   "layer-shell-cover-screen": true,
-
   "layer-shell": true,
   "layer": "overlay",
   "control-center-layer": "overlay",
   "cssPriority": "user",
+
   "control-center-width": 400,
-  "control-center-height": 995,
-  "control-center-margin-top": 42,
-  "control-center-margin-bottom": 42,
-  "control-center-margin-right": 42,
+  "control-center-height": 1020,
+  "control-center-margin-top": 30,
+  "control-center-margin-bottom": 30,
+  "control-center-margin-right": 30,
   "control-center-margin-left": 0,
 
-  "positionX": "right",
-  "positionY": "top",
   "notification-window-width": 400,
   "notification-icon-size": 48,
   "notification-body-image-height": 160,
   "notification-body-image-width": 200,
-  
 
   "timeout": 4,
   "timeout-low": 2,
   "timeout-critical": 6,
-
   "fit-to-screen": false,
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
@@ -48,19 +44,15 @@
     }
   },
   "widgets": [
-    "buttons-grid",
-    "volume",
-    "backlight",
     "title",
     "dnd",
+    "notifications",
     "mpris",
-    "notifications"
+    "buttons-grid",
+    "volume",
+    "backlight"
   ],
-
   "widget-config": {
-    "label": {
-      "text": " "
-    },
     "title": {
       "text": "Notificações"
     },
@@ -74,31 +66,32 @@
     "volume": {
       "label": "󰕾 ",
       "show-per-app": true
-  },
+    },
     "backlight": {
-      "label": "󰃟 ",
+      "label": "󰃟",
       "device": "intel_backlight"
-  },
-
+    },
     "buttons-grid": {
       "actions": [
         {
-          "label": "󰕾",
-          "command": "pavucontrol"
-        },
-        {
-          "label": "󰂳",
-          "command": "blueman-manager"
-        },
-        {
-          "label": "󰍯",
+          "label": "", 
           "type": "toggle",
-          "active": true,
-          "command": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+          "active": true
         },
         {
-          "label": "󰏘",
-          "command": "nwg-look"
+          "label": "󰂯",
+          "type": "toggle",
+          "active": true
+        }, 
+        {
+          "label": "󰛉",
+          "type": "toggle",
+          "active": false
+        },
+        {
+          "label": "󰌵",
+          "type":"toggle",
+          "active": false
         }
       ]
     }

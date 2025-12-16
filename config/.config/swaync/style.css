@@ -1,3 +1,7 @@
+* {
+  font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
+}
+
 .control-center {
   background-color: rgba(30, 30, 46, 0.7);
   border: 3px solid rgba(250, 179, 135, 0.8);
@@ -5,6 +9,11 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
   transition: background-color 0.1s ease;
   padding: 10px;
+}
+
+.control-center .notification-group {
+  background: transparent;
+  border: none;
 }
 
 .close-button {
@@ -29,7 +38,7 @@
 }
 
 .notification {
-  background-color: rgba(30, 30, 46, 0.51);
+  background-color: rgba(30, 30, 46, 0.8);
   border: 3px solid rgba(250, 179, 135, 0.8);
   border-radius: 8px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
@@ -38,8 +47,12 @@
   margin: 6px 0px;
 }
 
+.notification-action {
+  margin-left: 3px;
+}
+
 .notification:hover {
-  background-color: rgba(145, 102, 74, 0.51);
+  background-color: rgba(145, 102, 74, 0.7);
 }
 
 .notification-default-action:hover,
@@ -49,13 +62,13 @@
 }
 
 .floating-notifications {
-  padding: 10px; 
-  margin-top: 20px;
-  margin-right: 20px;
+  padding: 10px;
+  margin-top: 8px;
+  margin-right: 8px;
 }
 
 .floating-notifications .notification-row {
-    margin-bottom: 2px;
+  margin-bottom: 2px;
 }
 
 .widget-title {
@@ -64,29 +77,60 @@
   margin-bottom: 10px;
 }
 
+/* CONTAINER DA GRADE */
+.widget-buttons-grid {
+  margin: 12px;
+  background-color: rgba(250, 179, 135, 0.2);
+}
+
+/* BOTÃO INDIVIDUAL */
+.widget-buttons-grid button {
+  margin: 0px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.widget-buttons-grid button:checked {
+  border: 2px solid rgba(250, 179, 135, 0.4);
+  border-radius: 8px;
+  background: rgba(250, 179, 135, 0.8);
+}
+
+.widget-buttons-grid button:not(:checked) {
+  color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(100, 114, 125, 0.2);
+}
+
+.widget-buttons-grid flowbox flowboxchild:nth-of-type(1) button {
+  font-size: 0px;
+}
 
 /* Remover completamente a scrollbar no GTK4 (SwayNC) */
 scrollbar {
-    background: transparent;
-    color: transparent;
-    box-shadow: none;
-    border: none;
-    padding: 0;
-    margin: 0;
+  background: transparent;
+  color: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
+
 scrollbar slider {
-    background: transparent;
-    color: transparent;
-    box-shadow: none;
-    border: none;
-    padding: 0;
-    margin: 0;
+  background: transparent;
+  color: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
+
 scrollbar trough {
-    background: transparent;
-    color: transparent;
-    box-shadow: none;
-    border: none;
-    padding: 0;
-    margin: 0;
+  background: transparent;
+  color: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
