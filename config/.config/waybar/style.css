@@ -1,17 +1,14 @@
-
- * {
+* {
     font-family: "SF Mono", "JetBrainsMono Nerd Font Propo";
     font-size: 16px;
     font-weight: bold;
 
 }
 
-window#waybar {
+#waybar {
     background-color: rgba(30, 30, 46, 0.7);
     border: 3px solid rgba(250, 179, 135, 0.8);
     border-radius: 8px;
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.502);
-    color: #ffffff;
 }
 
 
@@ -26,16 +23,19 @@ window#waybar {
     margin: 12px 20px;
     padding: 0px 4px;
 }
+
 #workspaces button.empty {
     color: transparent
 }
+
 #workspaces button.active {
     font-size: 24px;
     font-weight: bold;
     color: #fab387;
 }
+
 #workspaces button.urgent {
-    background-color: rgba(235, 77, 75, 0.8);
+    background-color: rgba(255, 25, 25, 0.6);
 }
 
 #workspaces button:hover {
@@ -45,11 +45,12 @@ window#waybar {
 
 
 /* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
+.modules-left>widget:first-child>#workspaces {
     margin-left: 0;
 }
+
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
+.modules-right>widget:last-child>#workspaces {
     margin-right: 0;
 }
 
@@ -103,21 +104,25 @@ window#waybar {
 #custom-menu {
     margin-top: 12px;
 }
+
 #custom-power {
     margin-bottom: 12px;
 }
 
 
 
-#battery.charging, #battery.plugged {
+#battery.charging,
+#battery.plugged {
     color: #a6e3a1;
 }
+
 @keyframes blink {
     to {
         background-color: #ffffff;
         color: #000000;
     }
 }
+
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
     background-color: #f53c3c;
@@ -131,10 +136,11 @@ window#waybar {
 
 
 
-#tray > .passive {
+#tray>.passive {
     -gtk-icon-effect: dim;
 }
-#tray > .needs-attention {
+
+#tray>.needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
 }

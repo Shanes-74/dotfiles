@@ -2,17 +2,16 @@
 {
     //"layer": "top", // Waybar at top layer
     "position": "right", // Waybar position (top|bottom|left|right)
-    "height": 1010, // Waybar height (to be removed for auto height)
+    "height": 1040, // Waybar height (to be removed for auto height)
     "width": 20, // Waybar width
     //"spacing": 0, // Gaps between modules (4px)
-    "margin-left": -25,
-    "margin-right": 35,
+    "margin-left": -10,
+    "margin-right": 20,
     
     // Choose the order of the modules
     "modules-left": [
         "custom/menu",
         "network",
-        "custom/notification",
         /*"pulseaudio",
         "backlight",*/
         "custom/clipboard",
@@ -25,6 +24,7 @@
         "tray",
         "battery",
         "clock",
+        "custom/notification",
         "custom/power"
     ],
 
