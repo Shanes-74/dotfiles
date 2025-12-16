@@ -105,5 +105,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Executa o fastfetch apenas em shells interativos
 if [ -t 1 ]; then
-    fastfetch -c .config/fastfetch/minimal.jsonc
+    fastfetch -c ~/.config/fastfetch/minimal.jsonc
 fi
