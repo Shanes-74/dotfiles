@@ -1,5 +1,5 @@
 * {
-    font-family: "SF Mono", "JetBrainsMono Nerd Font Propo";
+    font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
     font-size: 16px;
     font-weight: bold;
 
@@ -95,6 +95,7 @@
 
 #clock {
     font-size: 26px;
+    font-family: "GeistMono Nerd Font Propo";
 }
 
 #tray {
