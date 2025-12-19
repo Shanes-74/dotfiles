@@ -1,7 +1,9 @@
-MenuBar=Disabled
 
 [DetailsMode]
 PreviewSize=32
+
+[ExtractDialog]
+1920x1080 screen: Window-Maximized=true
 
 [General]
 Version=202
