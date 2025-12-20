@@ -1,0 +1,22 @@
+* {
+    base: #282828cc;
+	base00: #282828;
+	base01: #32302f;
+	base02: #32302f;
+	base03: #665c54;
+	base04: #665c54;
+	base05: #fbf1c7;
+	base06: #fbf1c7;
+	base07: #cc241d;
+	base08: #cc241d;
+	base09: #ebdbb2;
+	base0A: #d79921;
+	base0B: #d79921;
+	base0C: #fabd2f;
+	base0D: #fabd2f;
+	base0E: #a89984;
+	base0F: #a89984;
+
+    spacing: 2;
+	background-color: transparent;
+}
