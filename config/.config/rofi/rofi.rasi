@@ -1,32 +1,10 @@
-* {
-	base00: #1e1e2e;
-	base01: #313244;
-	base02: #45475a;
-	base03: #6c7086;
-	base04: #bac2de;
-	base05: #cdd6f4;
-	base06: #cdd6f4;
-	base07: #ffffff;
-	base08: #f38ba8;
-	base09: #fab387;
-	base0A: #f9e2af;
-	base0B: #a6e3a1;
-	base0C: #94e2d5;
-	base0D: #89b4fa;
-	base0E: #cba6f7;
-	base0F: #f5c2e7;
-	peach-alpha: #fab387cc;
-	base10: #1e1e2ecc;
-
-	spacing: 0;
-	background-color: transparent;
-}
+@import "colors.rasi"
 
 window {
 	transparency: "real";
-	background-color: @base10;
+	background-color: @base;
 	border: 3px;
-	border-color: @peach-alpha;
+	border-color: @base09;
 	border-radius: 8px;
 	font: "SF Mono Regular 14";
 }
