@@ -1,1 +1,2 @@
-@theme "~/.config/rofi/themes/peach.rasi"
+//@theme "~/.config/rofi/themes/peach.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"

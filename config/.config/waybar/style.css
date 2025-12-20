@@ -1,3 +1,5 @@
+@import "colors/colors.css";
+
 * {
     font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
     font-size: 16px;
@@ -6,8 +8,8 @@
 }
 
 #waybar {
-    background-color: rgba(30, 30, 46, 0.7);
-    border: 3px solid rgba(250, 179, 135, 0.8);
+    background-color: @base;
+    border: 3px solid @border;
     border-radius: 8px;
 }
 
@@ -16,9 +18,9 @@
 #workspaces button {
     font-size: 24px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.1);
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    background: rgba(100, 114, 125, 0.3);
+    color: @white;
+    border: 3px solid @white;
+    background: @white;
     border-radius: 100%;
     margin: 12px 20px;
     padding: 0px 4px;
@@ -31,15 +33,15 @@
 #workspaces button.active {
     font-size: 24px;
     font-weight: bold;
-    color: #fab387;
+    color: @border;
 }
 
 #workspaces button.urgent {
-    background-color: rgba(255, 25, 25, 0.6);
+    background-color: @red;
 }
 
 #workspaces button:hover {
-    border: 3px solid rgba(250, 179, 135, 0.8);
+    border: 3px solid @border;
 }
 
 
@@ -69,11 +71,11 @@
 #custom-notification,
 #custom-clipboard {
     font-size: 28px;
-    color: #fab387;
+    color: @border;
     padding: 0px;
-    border: 2px solid rgba(250, 179, 135, 0.5);
+    border: 2px solid @border;
     border-radius: 8px;
-    background: rgba(250, 179, 135, 0.5);
+    background: @color1;
     margin: 4px 14px;
 }
 
@@ -89,8 +91,8 @@
 #custom-menu:hover,
 #custom-notification:hover,
 #custom-clipboard:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(250, 179, 135, 0.8);
+    background: @white;
+    border: 2px solid @border;
 }
 
 #clock {
@@ -114,20 +116,20 @@
 
 #battery.charging,
 #battery.plugged {
-    color: #a6e3a1;
+    color: @color2;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: white;
+        color: black;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    background-color: @red;
+    color: black;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -143,5 +145,5 @@
 
 #tray>.needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: @red;
 }
