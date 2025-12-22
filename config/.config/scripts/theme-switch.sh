@@ -5,9 +5,9 @@ THEME=$(printf "Gruvbox Dark\nCatppuccin Mocha Peach" | \
 
 case "$THEME" in
   "Gruvbox Dark")
-    ~/.config/scripts/gruvbox-theme.sh
+    ~/.config/.mythemes/gruvbox-dark/gruvbox-theme.sh
     ;;
   "Catppuccin Mocha Peach")
-    ~/.config/scripts/catppuccin-theme.sh
+    ~/.config/.mythemes/catppuccin-mocha-peach/catppuccin-theme.sh
     ;;
 esac
