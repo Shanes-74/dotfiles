@@ -6,30 +6,30 @@ set -e
 # -------------------------
 
 # Kitty
-rm -f ~/.config/kitty/colors.conf
+rm ~/.config/kitty/colors.conf
 
 ln -s ~/.mythemes/gruvbox-dark/kitty/colors.conf \
       ~/.config/kitty/colors.conf
 
 # Rofi
-rm -f ~/.config/rofi/colors.rasi
+rm ~/.config/rofi/colors.rasi
 
 ln -s ~/.mythemes/gruvbox-dark/rofi/colors.rasi \
       ~/.config/rofi/colors.rasi
 
 # Waybar
-rm -f ~/.config/waybar/colors.css
+rm ~/.config/waybar/colors.css
 
 ln -s ~/.mythemes/gruvbox-dark/waybar/colors.css \
       ~/.config/waybar/colors.css
 
 # Wallpapers
-rm -rf ~/Imagens/Wallpapers
+rm -r ~/Imagens/Wallpapers
 
-cp -rf ~/.mythemes/gruvbox-dark/Wallpapers ~/Imagens/
+cp -r ~/.mythemes/gruvbox-dark/Wallpapers ~/Imagens/
 
 # Hyprland
-rm -f ~/.config/hypr/modulos/colors.conf
+rm ~/.config/hypr/modulos/colors.conf
 
 ln -s ~/.mythemes/gruvbox-dark/hyprland/colors.conf \
       ~/.config/hypr/modulos/colors.conf
