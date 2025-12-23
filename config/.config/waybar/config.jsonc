@@ -13,9 +13,10 @@
         "custom/menu",
         "network",
         /*"pulseaudio",
-        "backlight",*/
-        "custom/clipboard",
-        "custom/wallpaper"
+        "backlight",
+        "custom/wallpaper",*/
+        "custom/clipboard"
+        
     ],
     "modules-center": [
         "hyprland/workspaces"

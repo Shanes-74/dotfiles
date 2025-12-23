@@ -1,9 +1,0 @@
-[Unit]
-Description=Alterar papel de parede usando SWWW
-After=swww.service
-
-[Service]
-ExecStart=/bin/bash /home/shane/.config/swww/swww.sh
-
-[Install]
-WantedBy=default.target
