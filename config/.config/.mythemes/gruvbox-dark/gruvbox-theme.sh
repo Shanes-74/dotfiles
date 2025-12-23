@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+# Notificação
+notify-send "Aplicando Tema" "Aplicando Gruvbox Dark..."
+
 # -------------------------
 # Cria symlinks
 # -------------------------
