@@ -11,6 +11,9 @@ ln -sf ~/.config/.mythemes/catppuccin-mocha-peach/kitty/colors.conf ~/.config/ki
 # Rofi
 ln -sf ~/.config/.mythemes/catppuccin-mocha-peach/rofi/colors.rasi ~/.config/rofi/
 
+# Swaync
+ln -sf ~/.config/.mythemes/catppuccin-mocha-peach/swaync/colors.css ~/.config/swaync/
+
 # Waybar
 ln -sf ~/.config/.mythemes/catppuccin-mocha-peach/waybar/colors.css ~/.config/waybar/
 
@@ -28,9 +31,8 @@ sed -i \
   -e 's/"workbench.colorTheme": ".*"/"workbench.colorTheme": "Catppuccin Mocha"/' \
   "$CODE_SETTINGS"
 
-# GTK and Icons
-gsettings set org.gnome.desktop.interface gtk-theme \
-"catppuccin-mocha-peach-standard+default"
+# (GTK3 + GTK4)
+./.config/scripts/gtk.sh catppuccin-mocha-peach-standard+default
 
 # QT (Kvantum)
 KVANTUM_THEME="catppuccin-mocha-peach#"
@@ -48,3 +50,6 @@ waybar &
 
 # Kitty (recarrega se estiver aberto)
 pkill -USR1 kitty || true
+
+# Swaync (recarrega se estiver aberto)
+swaync-client -R -rs

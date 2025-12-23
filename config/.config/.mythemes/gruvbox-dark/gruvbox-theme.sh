@@ -11,6 +11,9 @@ ln -sf ~/.config/.mythemes/gruvbox-dark/kitty/colors.conf ~/.config/kitty/
 # Rofi
 ln -sf ~/.config/.mythemes/gruvbox-dark/rofi/colors.rasi ~/.config/rofi/
 
+# Swaync
+ln -sf ~/.config/.mythemes/gruvbox-dark/swaync/colors.css ~/.config/swaync/
+
 # Waybar
 ln -sf ~/.config/.mythemes/gruvbox-dark/waybar/colors.css ~/.config/waybar/
 
@@ -28,9 +31,8 @@ sed -i \
   -e 's/"workbench.colorTheme": ".*"/"workbench.colorTheme": "Gruvbox Dark Medium"/' \
   "$CODE_SETTINGS"
 
-# GTK and Icons
-gsettings set org.gnome.desktop.interface gtk-theme \
-"Gruvbox-B-MB-Dark-Medium"
+# (GTK3 + GTK4)
+./.config/scripts/gtk.sh Gruvbox-B-MB-Dark-Medium
 
 # QT (Kvantum)
 KVANTUM_THEME="Gruvbox-Dark-Blue"
@@ -48,3 +50,6 @@ waybar &
 
 # Kitty (recarrega se estiver aberto)
 pkill -USR1 kitty || true
+
+# Swaync (recarrega se estiver aberto)
+swaync-client -R -rs
