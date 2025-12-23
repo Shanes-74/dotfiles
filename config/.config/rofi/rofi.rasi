@@ -1,13 +1,13 @@
 @import "colors.rasi"
 
 window {
-    width:            30%;       /* Define a largura da janela */
+    width:            28%;       /* Define a largura da janela */
     transparency:     "real";
     background-color: @base;
     border:           3px;
     border-color:     @base09;
     border-radius:    8px;
-    font:             "SF Mono Regular 14";
+    font:             "SF Pro Medium 14";
 }
 
 mainbox {
@@ -21,7 +21,11 @@ mainbox {
 }
 
 inputbar {
-    padding:          0 30px;
+    border:           1px;
+    border-color:     @base05;
+    border-radius:    8px;
+    margin:           4px 24px;
+    padding:          20px;
     children:         [prompt, textbox-prompt-colon, entry, case-indicator];
 }
 
@@ -50,23 +54,13 @@ message {
 }
 
 listview {
-    lines:            13;        /* Limita a altura da janela a 10 itens */
+    lines:            10;        /* Limita a altura da janela a 10 itens */
     scrollbar:        true;
     margin:           0 10px 0 30px;
 }
 
-scrollbar {
-    background-color: @base02;
-    handle-color:     @base03;
-    handle-width:     10px;
-    border:           0 1px;
-    border-radius:    8px;
-    border-color:     @base02;
-    margin:           0 0 0 20px;
-}
-
 element {
-    padding:          5px;
+    padding:          10px;
     spacing:          5px;
     highlight:        bold underline;
     children:         [element-icon, element-text];
