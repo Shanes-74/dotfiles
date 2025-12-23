@@ -1,117 +1,107 @@
 @import "colors.rasi"
 
 window {
-	transparency: "real";
-	background-color: @base;
-	border: 3px;
-	border-color: @base09;
-	border-radius: 8px;
-	font: "SF Mono Regular 14";
+    width:            30%;       /* Define a largura da janela */
+    transparency:     "real";
+    background-color: @base;
+    border:           3px;
+    border-color:     @base09;
+    border-radius:    8px;
+    font:             "SF Mono Regular 14";
 }
 
 mainbox {
-	children: [inputbar, message, mode-switcher, listview];
-	spacing: 30px;
-	padding: 30px 0;
-	border: 0;
-	border-color: @base02;
-	border-radius: 8px;
+    /* Removido o mode-switcher */
+    children:         [inputbar, message, listview];
+    spacing:          15px;      /* Espaço reduzido entre elementos */
+    padding:          20px 0;    /* Padding reduzido */
+    border:           0;
+    border-color:     @base02;
+    border-radius:    8px;
 }
 
 inputbar {
-	padding: 0 30px;
-	children: [prompt, textbox-prompt-colon, entry, case-indicator];
+    padding:          0 30px;
+    children:         [prompt, textbox-prompt-colon, entry, case-indicator];
 }
 
 prompt {
-	text-color: @base03;
+    text-color:       @base03;
 }
 
 textbox-prompt-colon {
-	expand: false;
-	str: ":";
-	margin: 0 1ch 0 0;
-	text-color: @base03;
+    expand:           false;
+    str:              ":";
+    margin:           0 1ch 0 0;
+    text-color:       @base03;
 }
 
 entry {
-	text-color: @base05;
+    text-color:       @base05;
 }
 
 case-indicator {
-	text-color: @base0F;
+    text-color:       @base0F;
 }
 
-mode-switcher, message {
-	border: 1px 0;
-	border-color: @base02;
-}
-
-button, textbox {
-	background-color: @base01;
-	text-color: @base05;
-	padding: 5px;
-}
-
-button selected {
-	background-color: @base09;
-	text-color: @base00;
-	border-radius: 8px;
+message {
+    border:           1px 0;
+    border-color:     @base02;
 }
 
 listview {
-	scrollbar: true;
-	margin: 0 10px 0 30px;
+    lines:            13;        /* Limita a altura da janela a 10 itens */
+    scrollbar:        true;
+    margin:           0 10px 0 30px;
 }
 
 scrollbar {
-	background-color: @base02;
-	handle-color: @base03;
-	handle-width: 10px;
-	border: 0 1px;
-	border-radius: 8px;
-	border-color: @base02;
-	margin: 0 0 0 20px;
+    background-color: @base02;
+    handle-color:     @base03;
+    handle-width:     10px;
+    border:           0 1px;
+    border-radius:    8px;
+    border-color:     @base02;
+    margin:           0 0 0 20px;
 }
 
 element {
-	padding: 5px;
-	spacing: 5px;
-	highlight: bold underline;
-	children: [element-icon, element-text];
+    padding:          5px;
+    spacing:          5px;
+    highlight:        bold underline;
+    children:         [element-icon, element-text];
 }
 
 element-text, element-icon {
-	background-color : inherit;
-	text-color: @base05;
-	foreground-color : inherit;
+    background-color: inherit;
+    text-color:       @base05;
 }
 
 element normal {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 element selected {
-	background-color: @base09;
-	border-radius: 8px;
+    background-color: @base09;
+    border-radius:    8px;
 }
 
 element-text selected {
-	text-color: @base00;
+    text-color:       @base00;
 }
 
 element alternate {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 element normal normal, element selected normal, element alternate normal {
-	text-color: @base05;
+    text-color:       @base05;
 }
 
 element normal urgent, element selected urgent, element alternate urgent {
-	text-color: @base08;
+    text-color:       @base08;
 }
 
 element normal active, element selected active, element alternate active {
-	text-color: @base0B;
+    text-color:       @base0B;
 }
