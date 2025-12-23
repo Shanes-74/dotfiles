@@ -42,6 +42,7 @@
   },
   "widgets": [
     "title",
+    "dnd",
     "notifications",
     "mpris",
     "buttons-grid",
@@ -49,6 +50,9 @@
     "backlight"
   ],
   "widget-config": {
+    "dnd": {
+      "text": "Não Perturbe"
+    },
     "title": {
       "text": "Notificações"
     },
@@ -79,8 +83,8 @@
           "command": "pavucontrol"
         },
         {
-          "label": "",
-          "command": "swaync-client -d"
+          "label": "󰖔",
+          "command": "~/.config/scripts/night-mode.sh"
         }
       ]
     }
