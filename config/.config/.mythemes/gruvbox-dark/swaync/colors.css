@@ -1,0 +1,13 @@
+@define-color base rgba(60, 56, 54, 0.7);
+
+@define-color border #ebdbb2;
+
+@define-color red #cc241d;
+
+@define-color white #ebdbb2;
+
+@define-color color1 rgba(204, 36, 29, 0.51);
+
+@define-color color2 rgba(216, 166, 92, 0.5);
+
+@define-color color3 rgba(138, 141, 147, 0.2);

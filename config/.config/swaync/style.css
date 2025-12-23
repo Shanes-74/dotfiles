@@ -1,58 +1,52 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+@import "colors.css";
+
 * {
   font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
 }
 
 .control-center {
-  background-color: rgba(30, 30, 46, 0.7);
-  border: 3px solid rgba(250, 179, 135, 0.8);
+  background-color: @base;
+  border: 3px solid @border;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+  transition: background-color 0.1s ease;
+  padding: 5px;
+  margin: -10px;
+}
+
+/* --- NOTIFICAÇÕES --- */
+.notification {
+  background-color: @base;
+  border: 3px solid @border;
   border-radius: 8px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
   transition: background-color 0.1s ease;
   padding: 10px;
+  margin: 6px 0;
 }
 
-.control-center .notification-group {
+.notification:hover {
+  background-color: @color2;
+}
+
+.notification-group {
   background: transparent;
   border: none;
 }
 
-.close-button {
-  /* The notification Close Button */
-  background: rgba(255, 255, 255, 0.2);
-  color: rgb(255, 255, 255);
-  text-shadow: none;
-  padding: 0;
-  border-radius: 8px;
-  margin-top: 14px;
-  margin-right: 8px;
-  box-shadow: none;
-  border: none;
-  min-width: 24px;
-  min-height: 24px;
-}
-
-.close-button:hover {
-  box-shadow: none;
-  background: rgba(250, 179, 135, 0.2);
-  border: none;
-}
-
-.notification {
-  background-color: rgba(30, 30, 46, 0.8);
-  border: 3px solid rgba(250, 179, 135, 0.8);
-  border-radius: 8px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
-  transition: background-color 0.1s ease;
+.floating-notifications {
   padding: 10px;
-  margin: 6px 0px;
+  margin-top: 2px;
+  margin-right: 2px;
+}
+
+.floating-notifications .notification-row {
+  margin-bottom: 2px;
 }
 
 .notification-action {
   margin-left: 3px;
-}
-
-.notification:hover {
-  background-color: rgba(145, 102, 74, 0.7);
 }
 
 .notification-default-action:hover,
@@ -61,75 +55,113 @@
   background-color: transparent;
 }
 
-.floating-notifications {
-  padding: 10px;
-  margin-top: 8px;
+/* Botão de fechar da notificação */
+.close-button {
+  background: @color1;
+  color: @white;
+  padding: 0;
+  border-radius: 8px;
+  margin-top: 14px;
   margin-right: 8px;
+  min-width: 24px;
+  min-height: 24px;
+  border: none;
+  box-shadow: none;
 }
 
-.floating-notifications .notification-row {
-  margin-bottom: 2px;
+.close-button:hover {
+  background: @red;
 }
 
+/* --- WIDGETS (Títulos e Botões) --- */
 .widget-title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-/* CONTAINER DA GRADE */
-.widget-buttons-grid {
-  margin: 12px;
-  background-color: rgba(250, 179, 135, 0.2);
-}
-
-/* BOTÃO INDIVIDUAL */
 .widget-buttons-grid button {
-  margin: 0px;
+  background: @color2;
+  color: @border;
+  border: 2px solid @border;
+  margin: 0;
   padding: 5px 10px;
   font-size: 16px;
   border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
-.widget-buttons-grid button:checked {
-  border: 2px solid rgba(250, 179, 135, 0.4);
+.widget-buttons-grid button:hover {
+  color: @base;
+  background: @border;
+  border: 2px solid @base;;
+}
+
+/* --- SLIDERS (Volume e Brilho) --- */
+scale.horizontal {
   border-radius: 8px;
-  background: rgba(250, 179, 135, 0.8);
+  margin: 8px 0;
 }
 
-.widget-buttons-grid button:not(:checked) {
-  color: rgba(255, 255, 255, 0.5);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  background: rgba(100, 114, 125, 0.2);
+/* Fundo da barra (o caminho) */
+scale.horizontal trough {
+  background-color: @color3;
+  border: 1px solid @color3;
+  border-radius: 8px;
+  min-height: 12px;
 }
 
-.widget-buttons-grid flowbox flowboxchild:nth-of-type(1) button {
-  font-size: 0px;
+/* Parte preenchida da barra */
+.widget-volume scale trough highlight,
+.widget-backlight scale trough highlight {
+  background: @border;
+  border-radius: 8px;
 }
 
-/* Remover completamente a scrollbar no GTK4 (SwayNC) */
-scrollbar {
-  background: transparent;
-  color: transparent;
+/* O "Círculo/Botão" de arrastar */
+scale slider {
+  background-color: @border;
+  /* Cor padrão */
+  border-radius: 999px;
+  padding: 0 8px;
+  margin: -13px;
   box-shadow: none;
-  border: none;
-  padding: 0;
-  margin: 0;
+  border: 2px solid @base;
+  outline: none;
 }
 
-scrollbar slider {
-  background: transparent;
-  color: transparent;
-  box-shadow: none;
-  border: none;
-  padding: 0;
-  margin: 0;
+/* Hover no Círculo */
+.widget-volume scale slider:hover,
+.widget-backlight scale slider:hover {
+  background: @base;
+  border: 2px solid @border;
+  padding: 0 12px;
+  margin: -16px;
 }
 
+/* Estilo geral do botão de Sink */
+.widget-volume > box > button {
+  background: @color2;       /* Cor de fundo */
+  border: 2px solid @border; /* Borda para combinar com o resto */
+  border-radius: 8px;        /* Arredondamento */
+  color: @white;             /* Cor do ícone da seta */
+  margin-left: 10px;         /* Espaço entre o slider e o botão */
+  padding: 6px;
+  margin: 14px 10px
+}
+
+/* Efeito ao passar o mouse */
+.widget-volume > box > button:hover {
+  background: @border;
+  color: @base;
+}
+
+/* --- SCROLLBAR (Ocultar) --- */
+scrollbar,
+scrollbar slider,
 scrollbar trough {
   background: transparent;
   color: transparent;
-  box-shadow: none;
   border: none;
   padding: 0;
   margin: 0;
