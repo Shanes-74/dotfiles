@@ -107,3 +107,5 @@ source $ZSH/oh-my-zsh.sh
 if [ -t 1 ]; then
     fastfetch -c ~/.config/fastfetch/minimal.jsonc
 fi
+
+export PATH=$PATH:/home/shane/.spicetify
