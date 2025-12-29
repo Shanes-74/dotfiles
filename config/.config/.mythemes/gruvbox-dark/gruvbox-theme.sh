@@ -34,6 +34,9 @@ sed -i \
   -e 's/"workbench.colorTheme": ".*"/"workbench.colorTheme": "Gruvbox Dark Medium"/' \
   "$CODE_SETTINGS"
 
+# Spotify
+spicetify config current_theme Gruvify
+
 # (GTK3 + GTK4)
 ./.config/scripts/gtk.sh Gruvbox-B-MB-Dark-Medium
 
